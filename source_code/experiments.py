@@ -1,14 +1,13 @@
-from main import *
+from fdtc_functions import *
 import numpy as np
-# from fractions import Fraction
 import pandas as pd
 import time
 
 
 def rand_word(ind: int, length: int) -> tuple:
-    gens = np.random.choice(np.arange(1, ind), length)
+    geners = np.random.choice(np.arange(1, ind), length)
     signs = np.random.choice(np.array([-1, 1]), length)
-    word = (gens, signs)
+    word = (geners, signs)
     return word
 
 
