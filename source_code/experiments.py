@@ -123,17 +123,16 @@ chain_length = 100  # length of the chain
 distribution = "uniform"  # available distributions: uniform, positive_uniform, nonsymmetric, nonuniform
 gen_distribution = []  # in case of nonsymmetric or nonuniform, it is the array of probabilities of each generator
 sign_distribution = [0.5, 0.5]  # in case of nonuniform, it is the array of probabilities of each sign, i.e. +-1
+# TODO: change only the row above
 
 # file to store results
 f = open(f"exp3_{index}_{chain_length}_{distribution}_{gen_distribution}_{sign_distribution}.txt", "a")
 
-all_words = random_walk(index, base_length, chain_length, distribution)
+all_words = random_walk(index, base_length, chain_length, distribution, gen_distribution, sign_distribution)
 
 frac_twists = results(index, all_words, distribution)
 
 transition_pairs = trans_results(index, frac_twists, distribution)
 
-
-# ==============***************END OF FIRST EXPERIMENT****************===============
-
+# ==============***************END OF EXPERIMENT****************===============
 print("--- %s seconds ---" % (time.time() - start_time))
