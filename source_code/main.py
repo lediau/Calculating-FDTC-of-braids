@@ -61,7 +61,7 @@ while True:
 
 # Input the braid group index
 while True:
-    n = input("Enter the order of the Braid group: ")
+    n = input("Enter the index of the Braid group: ")
     if n.isnumeric():
         n = int(n)
         if n > 0:
