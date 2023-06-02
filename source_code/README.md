@@ -1,5 +1,7 @@
 # Guide: How to use?
 
+First, note that the experiment.py file can only be changed manually. In other words, one has to change some rows in the source code, in order to be able to run experiments on one's own. Nevertheless, everyone can easily calculate the FDTC of braids automatically. Here is how:
+
 ## If you are using an IDE (PyCharm, Visual studio, etc):
 1. Download all the files in this folder
 2. Make sure they are in the same local directory
