@@ -15,7 +15,10 @@ First, note that the ```experiment.py``` file can only be changed manually. In o
 ## If you are compiling the code online:
 1. Copy all the file content in the virtual IDE
 2. Make sure you use the following order: ```input_methods``` -> ```fdtc_fractions``` -> ```main```
-3. Remove the following two rows (```from input_methods import \*```, ```from fdtc_fractions import \*```)
+3. Remove the following two rows (```from input_methods import *```, ```from fdtc_fractions import *```)
 4. Run your program and follow the instructions
 
 **NB.** In this case, the file method is unavailable.
+
+### Preview of the output format
+
