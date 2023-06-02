@@ -1,9 +1,11 @@
 import numpy as np
 
 
-def input_validation(generators: np.array, signs: np.array) -> (np.array, np.array):
+def input_validation(word: tuple) -> (np.array, np.array):
     work_gens = np.array([])
     work_signs = np.array([])
+    generators = word[0]
+    signs = word[1]
 
     if len(generators) != len(signs):
         print("Some generators might be missing their sign, or vice versa! Please check again...")
@@ -36,13 +38,3 @@ def write_word(word: tuple) -> str:
             + (str(eps[i])).translate(SUP) for i in range(len(gen))]
     word = " ".join(word)
     return word
-
-
-# ===============================================================================
-# ============================MAIN PART==========================================
-gens = np.array([1, 2, 3, 4, 5])
-sgns = np.array([1, -10, 5, -3, 0])
-
-print(input_validation(gens, sgns))
-print(write_word((gens, sgns)))
-print(write_word(input_validation(gens, sgns)))
