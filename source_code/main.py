@@ -1,46 +1,10 @@
-import numpy as np
+from input_methods import *
 from fractions import Fraction
 from collections import Counter
-# from math import gcd
-
-# TODO: make the input format more user-friendly. Maybe read from a file or something...
-"""
-# Order of Braid group
-n = int(input("Enter the order of the Braid group: "))
-N = n**2 - n + 1
-k = int(input("Enter the length of the word: "))
-
-# word beta in Artin generators
-generators = np.array([]).astype(int)
-signs = np.array([]).astype(int)
-
-# TODO: change input format. It's awful
-for i in range(k):
-    element = input(f"Generator Sign {i}: ").split()
-    generators = np.append(generators, int(element[0]))
-    signs = np.append(signs, int(element[1]))
-"""
 
 
 # ==========*************==============**************===============************============
-# TODO: work on format of data: file or standard
-# TODO: powers not only 1, -1
-# TODO: powers not only 1, -1
 # __________*************__________UTILITY FUNCTIONS___________****************______________
-def write_word(word: tuple) -> str:
-    """
-    :param word: a tuple (gen, eps) with generators and epsilons
-    :return: visual word with sigmas and superscripted epsilons
-    """
-    gen, eps = word
-    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-    SUP = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
-    word = [("\N{GREEK SMALL LETTER SIGMA}" + str(gen[i])).translate(SUB)
-            + (str(eps[i])).translate(SUP) for i in range(len(gen))]
-    word = " ".join(word)
-    return word
-
-
 def delta(dim: int) -> tuple:
     """
     :param dim: order n of group B_n
@@ -59,13 +23,13 @@ def to_power(word: tuple, p: int) -> tuple:
     :param p: the power to be raised (can be negative)
     :return: the pair (new_gens, new_eps), i.e. the new word w^p
     """
-    gens, epsilons = word
+    geners, epsilons = word
     if p >= 0:
-        new_gens = np.tile(gens, p)
+        new_gens = np.tile(geners, p)
         new_epsilons = np.tile(epsilons, p)
     else:
         p *= -1
-        new_gens = np.tile(np.flip(gens), p)
+        new_gens = np.tile(np.flip(geners), p)
         new_epsilons = np.tile(np.flip(epsilons * (-1)), p)
 
     return new_gens, new_epsilons
