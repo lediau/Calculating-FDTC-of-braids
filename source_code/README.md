@@ -22,3 +22,8 @@ First, note that the ```experiment.py``` file can only be changed manually. In o
 
 ## Preview of the output format
 Here is a visual illustration of how the program works:
+
+
+
+https://github.com/lediau/Calculating-FDTC-of-braids/assets/33701673/39b12336-95fb-4310-87ff-f44bf6aa54ca
+
