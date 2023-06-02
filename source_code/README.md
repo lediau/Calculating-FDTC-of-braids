@@ -20,5 +20,5 @@ First, note that the ```experiment.py``` file can only be changed manually. In o
 
 **NB.** In this case, the file method is unavailable.
 
-### Preview of the output format
-
+## Preview of the output format
+Here is a visual illustration of how the program works:
